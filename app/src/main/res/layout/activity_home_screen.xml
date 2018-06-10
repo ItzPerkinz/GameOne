@@ -8,10 +8,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:label=""
     tools:context="itzperkinz.gameone.HomeScreen">
 
-    <TextView
+    <Button
+        android:text="Begin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/begin_button"
+        android:width="200dp"
+        android:height="50dp"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="StartGame"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/leaderboard"
+        android:layout_above="@+id/begin_button"
+        android:layout_below="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="56dp"
+        android:divider="@android:drawable/divider_horizontal_dark" />
+
+    <TextView
+        android:text="Leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="20dp" />
+
 </RelativeLayout>
